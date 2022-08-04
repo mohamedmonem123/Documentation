@@ -6,11 +6,11 @@ a very basic CMOS inverter is designed on xschem. PMOS transistor is set to be d
 The next 2 figures present the DC analysis:
 
 
-![DC schematic](dc schem.png)
+![DC schematic](dc%20schem.png)
 
 
 
-![Vout vs Vin](file:///home/monem/Pictures/Screenshots/inverter%20analysis/dc%20result.png)
+![Vout vs Vin](dc%20result.png)
 
 ------
 
@@ -18,11 +18,11 @@ The next 2 figures present the DC analysis:
 The next 2 figures present the transient analysis of the inverter which is very predictable since vout is the opposite of the vin.
 
 
-![Transient schematic](file:///home/monem/Pictures/Screenshots/inverter%20analysis/trans%20schem.png)
+![Transient schematic](trans%20schem.png)
 
 
 
-![Transient out vs in](file:///home/monem/Pictures/Screenshots/inverter%20analysis/trans%20plot.png)
+![Transient out vs in](trans%20plot.png)
 
 
   
