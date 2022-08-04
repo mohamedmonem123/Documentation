@@ -1,0 +1,28 @@
+# CMOS inverter design & simulation 
+
+
+a very basic CMOS inverter is designed on xschem. PMOS transistor is set to be double the area of NMOS transistor.
+
+The next 2 figures present the DC analysis:
+
+
+![DC schematic](file:///home/monem/Pictures/Screenshots/inverter%20analysis/dc%20schem.png)
+
+
+
+![Vout vs Vin](file:///home/monem/Pictures/Screenshots/inverter%20analysis/dc%20result.png)
+
+------
+
+
+The next 2 figures present the transient analysis of the inverter which is very predictable since vout is the opposite of the vin.
+
+
+![Transient schematic](file:///home/monem/Pictures/Screenshots/inverter%20analysis/trans%20schem.png)
+
+
+
+![Transient out vs in](file:///home/monem/Pictures/Screenshots/inverter%20analysis/trans%20plot.png)
+
+
+  
