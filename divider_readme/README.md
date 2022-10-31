@@ -20,8 +20,8 @@ divider, and multi modulus divider. Benefits of pulse swallow topology may be su
 MMD is abbreviation of Multi-Modulus Divider. It is built from consequtive cells, each cell divides by 2 numbers do it is called dual-modulus which may be 2/3, 1/2, or any other combination. Most common cells in the MMD are 2/3 and 1/2 dual-modulus. Proposed implementation of our divider is MMD using 2/1 cells since it has a relatively better power consumption, phase noise.
 
 
- The structure of the proposed divider is depicted in Fig [divider](#la),
- each cell is designed as shown in Fig \ref{cell}. DFF shown in Fig \ref{ff} is designed to be by dynamic CMOS DFF instead of static implementation because of better speed properties of the dynamic DFF rather than the static DFF.
+ The structure of the proposed divider is depicted below,
+ each 1/2 cell is designed using gates, and Flipflops. Proposed DFF is designed to be by dynamic CMOS DFF instead of static implementation because of better speed properties of the dynamic DFF rather than the static DFF.
 
 
 Now, let us demonstrate how the N-divider acts as a 2/1 divider depending on its corresponding input signals. Starting with divide-by-2 mode, if P=0 or MODO = 0, the output signal of NAND gate I4 is 1. As a result, NAND gate I3 acts as an inverter, and the output frequency FO = FI/2. the equivalent. We must note that if there is a flip flop cascaded by an inverter, and the output Q is backed to the input D, the output frequency is half of the input clock frequency which is considered a by 2 divider topology.
@@ -33,6 +33,36 @@ simple operation, as well as low power consumption. The secret beyond its import
 gate I3 acts as a multiplexer to select either divide-by-2 or divide-by-1 mode by applying a logical function (P. MODO).
 
 
-[divider]:images/schematics/Divider.png "Image Title"
+![divider](images/schematics/Divider.png)
+*Divider Design*
 
-![divider][divider]
+
+
+![cell](images/schematics/1_2%20Div%20Cell.png)
+*1/2 cell Design*
+
+
+
+![DFF](images/schematics/Dff.png)
+*DFF Design*
+
+
+Control signals or P's have the main role of choosing the division ratio, each one is attached to a cell, so how many control signals we need for our PLL? 
+
+
+divider output signal period follows the formula:
+
+
+Tout = [$2^n$ -2<sup>n-1</sup> .P(n-1) - 2<sup>n-2</sup>.P(n-2) - ....... - $2^0$ .P0]Tin
+
+
+In order to cover division ratios from 240 to 250, the number of cells must be 8 at least, so the max N is 256.
+
+
+## Simulation result
+
+Divider simulation has been done using various testing techniques. First of all, the divider is simulated at an input frequency of 2.5 GHz, and selected-N is 250. hence, the output frequency is expected to be 10 MHz. The figure below shows the transient output signal from the simulation with precise 10 MHZ frequency.
+
+
+![out](images/Simulations/out_tran.png)
+*Output transient signal at input freq =2.5 GHz & N=250*
