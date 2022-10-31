@@ -53,7 +53,7 @@ Control signals or P's have the main role of choosing the division ratio, each o
 divider output signal period follows the formula:
 
 
-Tout = [$2^n$ -2<sup>n-1</sup> .P(n-1) - 2<sup>n-2</sup>.P(n-2) - ....... - $2^0$ .P0]Tin
+Tout = [2<sup>n</sup> -2<sup>n-1</sup> .P(n-1) - 2<sup>n-2</sup>.P(n-2) - ....... - $2^0$ .P0]Tin
 
 
 In order to cover division ratios from 240 to 250, the number of cells must be 8 at least, so the max N is 256.
